@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* debug class adds border: 2px solid red to the element
+ */
+.debug {
+  @apply border-2 border-red-500;
+}

@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Counter Component > must match the snapshot 1`] = `
+"<div class=\\"mx-auto text-center debug\\">
+  <h1 class=\\"text-4xl\\">Counter</h1>
+  <p data-testid=\\"counter\\" class=\\"my-5 text-2xl\\">0 <sup>2</sup> = 0</p>
+  <div class=\\"buttons\\"><button data-testid=\\"decrement\\" class=\\"px-4 py-2 font-bold text-white bg-yellow-500 rounded hover:bg-yellow-700\\">-1</button><button data-testid=\\"increment\\" class=\\"px-4 py-2 ml-5 font-bold text-white bg-green-500 rounded hover:bg-green-700\\">+1</button></div>
+</div>"
+`;
