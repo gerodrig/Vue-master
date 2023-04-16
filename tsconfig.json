@@ -12,7 +12,6 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "noEmit": true,
-    "types": ["@types/jest"],
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
