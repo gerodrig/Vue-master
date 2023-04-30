@@ -40,7 +40,7 @@ export default {
             if (term.value.length > 2) {
                 return getEntriesByTerm(term.value);
             } else {
-                return store.state.journal.entries;
+                return store.state.journal?.entries || [];
             }
         });
         

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import daybookRouter, { RouteNames } from '../../../../src/router/journal/';
+import daybookRouter, { RouteNames } from '@/router/journal/';
 import { RouteLocationNormalized as Route } from 'vue-router';
 
 describe('tests in router module in Daybook', () => {
@@ -49,7 +49,7 @@ describe('tests in router module in Daybook', () => {
         } as unknown as Route;
 
         //find the children with name 'entry'
-        const props = daybookRouter.children.find(child => child.name === RouteNames.ENTRY).props(route);
+        const props = (daybookRouter as any).children.find((child: any) => child.name === RouteNames.ENTRY).props(route);
 
         expect(props).toEqual({ id: 'ABC-123' });
     });

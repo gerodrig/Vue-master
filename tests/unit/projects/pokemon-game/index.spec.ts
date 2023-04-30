@@ -17,7 +17,7 @@ describe('Pokemon index component', () => {
       setItem: vi.fn(),
       clear: vi.fn(),
     };
-    global.localStorage = localStorageMock;
+    global.localStorage = localStorageMock as any;
     wrapper = shallowMount(PokemonComponent);
   });
 
