@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests in Entry component > should match the snapshot 1`] = `
+"<div class=\\"p-2 mb-3 transition-all duration-200 ease-in border-b border-green-600 cursor-pointer hover:bg-slate-300\\">
+  <!-- Title -->
+  <div class=\\"flex\\"><span class=\\"text-lg font-bold text-green-600\\">18</span><span class=\\"mx-1 font-bold\\">February</span><span class=\\"mx-2 font-light\\">2022, Friday</span></div>
+  <div class=\\"text-base\\">Today was a great day! I went on a hike and saw some amazing views.</div>
+</div>"
+`;

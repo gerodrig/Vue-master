@@ -13,6 +13,13 @@
     </main>
     <Footer title="Gerardo Rodriguez" />
   </div>
+
+<!-- //example to keep alive -->
+  <!-- <router-view v-slot="{ Component }">
+   <keep-alive>
+     <component :is="Component" />
+    </keep-alive>
+  </router-view> -->
 </template>
 
 <script lang="ts">

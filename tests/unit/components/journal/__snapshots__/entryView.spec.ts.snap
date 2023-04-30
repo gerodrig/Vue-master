@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EntryView components test > should match the entry correctly snapshot 1`] = `
+"<div class=\\"flex justify-between p-2\\">
+  <div><span class=\\"text-3xl font-bold text-green-600\\">18</span><span class=\\"mx-1 text-2xl\\">February</span><span class=\\"mx-2 text-xl font-light\\">2022, Friday</span></div>
+  <div><input type=\\"file\\" accept=\\"image/*\\" style=\\"display: none;\\"><button class=\\"px-4 py-2 mx-2 font-bold text-white bg-red-500 rounded hover:bg-red-600\\"> Delete <i class=\\"fa fa-trash-alt\\"></i></button><button class=\\"px-4 py-2 font-bold text-white bg-blue-700 rounded hover:bg-blue-900\\"> Upload photo <i class=\\"fa fa-upload\\"></i></button></div>
+</div>
+<hr>
+<div class=\\"flex flex-col h-screen px-3\\"><textarea class=\\"flex-1 h-full p-2 mt-4 text-xl border-2 outline-emerald-700 bg-green-50\\" placeholder=\\"What happened today?\\"></textarea></div>
+<!--v-if-->
+<!--v-if-->
+<fab-stub icon=\\"fa-save\\"></fab-stub>"
+`;

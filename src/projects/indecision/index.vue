@@ -1,4 +1,5 @@
 <template>
+    <Header :title="title" />
     <img v-if="image" :src="image" alt="background" class="fixed top-0 left-0 object-cover w-screen h-screen -z-10">
     <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-40 -z-10"></div>
 
@@ -13,18 +14,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+import { useRoute } from 'vue-router';
+import Header from '@components/shared/Header.vue';
 
 
 export default defineComponent({
     name: 'Indecision',
+    components: { Header },
     //get data from input
     data() {
         return {
             question: '',
             answer: null || '',
             image: null,
-            isValidQuestion: false
+            isValidQuestion: false,
+            title: 'Decision Maker',
         }
     },
     methods: {

@@ -1,5 +1,4 @@
 <template>
-
   <div
     class="relative w-full h-[80vh] md:h-screen bg-cover bg-[url(@/assets/pokemon-game/background.png)] transform -translate-y-36"
   >
@@ -37,12 +36,14 @@ import {
   GameNotifications,
 } from "@components/pokemon-game";
 import usePokemon from "@/composables/pokemon-game/usePokemon";
+import Header from "@/components/shared/Header.vue";
 
 export default defineComponent({
   components: {
     PokemonPicture,
     PokemonOptions,
     GameNotifications,
+    Header,
   },
   name: "Pokemon",
   setup() {

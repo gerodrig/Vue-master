@@ -1,7 +1,9 @@
 {
     "extends": "./tsconfig.json",
     "include": [
-      "vitest/**/*"
+      "vitest/**/*",
+      "src/**/*",
+      "tests/**/*"
     ],
     "exclude": [],
     "compilerOptions": {

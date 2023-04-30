@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PokemonOptions Component > must match the snapshot 1`] = `
+"<div data-v-6c7a75d2=\\"\\" class=\\"bg-black opacity-80\\">
+  <div data-v-6c7a75d2=\\"\\" class=\\"flex items-center mx-auto justify-center max-w-[800px]\\">
+    <ul data-v-6c7a75d2=\\"\\" class=\\"flex-wrap justify-center py-6 text-blue-700 list-none md:flex\\">
+      <li data-v-6c7a75d2=\\"\\" class=\\"\\" style=\\"pointer-events: auto;\\" aria-disabled=\\"false\\">BULBASAUR</li>
+      <li data-v-6c7a75d2=\\"\\" class=\\"\\" style=\\"pointer-events: auto;\\" aria-disabled=\\"false\\">IVYSAUR</li>
+      <li data-v-6c7a75d2=\\"\\" class=\\"\\" style=\\"pointer-events: auto;\\" aria-disabled=\\"false\\">VENUSAUR</li>
+      <li data-v-6c7a75d2=\\"\\" class=\\"\\" style=\\"pointer-events: auto;\\" aria-disabled=\\"false\\">CHARMANDER</li>
+    </ul>
+  </div>
+</div>"
+`;

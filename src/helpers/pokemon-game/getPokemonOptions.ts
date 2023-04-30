@@ -23,10 +23,11 @@ import { Pokemon } from '@/interfaces/pokemon-game';
     return pokemons.sort(() => Math.random() - 0.5).slice(0, 4);
   };
 
-const getPokemons = () => {
+export const getPokemons = () => {
   const pokemonsArr = Array.from(Array(649));
   return pokemonsArr.map((_, index) => index + 1);
 };
+
 const getPokemonOptionsFromStorage = async () => {
     const pokemons = getPokemonsFromStorage();
     if (pokemons.length > 0) {
@@ -41,7 +42,7 @@ const getPokemonOptionsFromStorage = async () => {
     }
 };
 
-const getPokemonOptions = () => {
+export const getPokemonOptions = () => {
   const mixedPokemons = getPokemons().sort(() => Math.random() - 0.5);
     const pokemons = mixedPokemons.slice(0, 4);
     //save to local storage
@@ -50,7 +51,7 @@ const getPokemonOptions = () => {
 //   return [{ id: 1, name: 'bulbasaur' }, { id: 4, name: 'charmander' }, { id: 25, name: 'pikachu' }, { id: 7, name: 'squirtle' }];
 };
 
-const getPokemonNames = async ([a, b, c, d]: Number[] = []): Promise<Pokemon[]> => {
+export const getPokemonNames = async ([a, b, c, d]: Number[] = []): Promise<Pokemon[]> => {
   //? GraphQL query
   const query = ` 
     query pokemons {
@@ -69,8 +70,9 @@ const getPokemonNames = async ([a, b, c, d]: Number[] = []): Promise<Pokemon[]> 
     // return [{ id: 1, name: 'bulby' }, { id: 4, name: 'squirtle' }, { id: 25, name: 'pikachu' }, { id: 6, name: 'charmander' }];
 
   try {
-    const response = await pokemonApi.post('',{ query });
-    const pokemons = response.data.data.pokemon_v2_pokemon;
+    const { data } = await pokemonApi.post('',{ query });
+    const pokemons = data.data.pokemon_v2_pokemon;
+
     return pokemons;
 
   } catch (error) {

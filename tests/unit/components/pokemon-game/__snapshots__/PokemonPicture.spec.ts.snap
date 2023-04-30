@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PokemonPicture Component > should match the snapshot 1`] = `
+"<div data-v-de2a09f6=\\"\\" class=\\"container flex flex-col justify-center my-10 h-52 debug\\"><img data-v-de2a09f6=\\"\\" src=\\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg\\" alt=\\"\`Pokemon ?\`\\" class=\\"hidden-pokemon\\"><!-- <button @click=\\"toggleReveal\\">Toggle Hide</button> -->
+</div>"
+`;

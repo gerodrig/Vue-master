@@ -1,6 +1,6 @@
 <template>
    <!-- Start of card -->
-    <div class="card">
+    <div class="card h-52">
             <div class="card-header">
               <h2 class="text-xl font-semibold">{{ name }}</h2>
             </div>
