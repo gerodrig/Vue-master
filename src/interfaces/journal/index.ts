@@ -1,3 +1,6 @@
+import { MapState } from "@/store/map/state";
+import { PlacesState } from "@/store/places/state";
+
 export interface JournalState {
         isLoading: boolean;
         entries: Entry[];
@@ -23,6 +26,8 @@ export type AuthStatus = 'authenticated' | 'not-authenticated' | 'authenticating
 export interface Rootstate {
     journal?: JournalState;
     auth?: AuthState;
+    places?: PlacesState;
+    map?: MapState;
 }
 
 export interface Entry {

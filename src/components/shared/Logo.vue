@@ -13,12 +13,12 @@ export default {
   name: 'Logo',
   props: {
     height: {
-      type: Number,
-      default: 256
+      type: String,
+      default: '256'
     },
     width: {
-      type: Number,
-      default: 256
+      type: String,
+      default: '256'
     },
     img: {
       type: String,
@@ -32,8 +32,8 @@ export default {
   setup(props) {
     return {
       img: ref(props.img),
-      height: ref(props.height),
-      width: ref(props.width),
+      height: ref(Number.parseInt(props.height) || 256),
+      width: ref(Number.parseInt(props.width) || 256),
       animate: ref(props.animate)
     };
   },

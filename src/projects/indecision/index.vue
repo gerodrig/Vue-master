@@ -14,14 +14,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { useRoute } from 'vue-router';
+import { defineAsyncComponent, defineComponent } from 'vue';
 import Header from '@components/shared/Header.vue';
 
 
 export default defineComponent({
     name: 'Indecision',
-    components: { Header },
+    components: { 
+        Header: defineAsyncComponent(() => import('@/components/shared/Header.vue')),
+    },
     //get data from input
     data() {
         return {

@@ -1,6 +1,6 @@
 <template>
   <header class="py-4 text-white bg-green-500">
-    <div class="container flex mx-auto">
+    <div class="container flex mx-4">
       <!-- Left arrow indicating to go back  -->
       <button v-if="!isHome" @click="goBack" class="flex items-center mr-10 space-x-2 text-white hover:text-gray-600 focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -34,7 +34,12 @@ export default {
 
   
     const goBack = () => {
-        router.go(-1)
+
+      //push to home page and destroy component
+        router.push({ name: 'home' });
+        setTimeout(() => {
+          location.reload();
+        }, 10);
       }
       return { title, goBack, isHome };
     },

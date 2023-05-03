@@ -27,27 +27,6 @@ export default defineComponent({
           description: `The YesNo Decision Maker is a simple web application that helps you make decisions when you're indecisive. It fetches the YesNo API to get a random yes or no answer, which can be useful for making simple decisions.`,
           image: '',
           path: '/indecision',
-          //           Description: The YesNo Decision Maker is a simple web application that helps you make decisions when you're indecisive. It fetches the YesNo API to get a random yes or no answer, which can be useful for making simple decisions like "Should I go out tonight?" or "Should I buy this item?".
-
-          // Features:
-
-          // Fetches the YesNo API to get a random answer (yes, no, or maybe).
-          // Displays the answer along with an image related to the answer (e.g. a happy face for "yes" or a sad face for "no").
-          // Allows the user to input a custom question to ask the decision maker.
-          // Provides a simple and intuitive user interface that is easy to use.
-          // Works on desktop and mobile devices.
-          // Technologies:
-
-          // HTML, CSS, and JavaScript for the front-end.
-          // Axios or the native fetch API to fetch data from the YesNo API.
-          // Vue.js or React for building the UI components.
-          // Jest or another testing framework for unit and integration tests.
-          // Additional Features (optional):
-
-          // Allows the user to share the answer on social media (e.g. Twitter or Facebook).
-          // Saves the user's question and the decision made for future reference.
-          // Provides a history of previous questions and answers.
-          // Offers additional information or resources related to the decision made (e.g. local events for "yes" or online shopping options for "no").
         },
         {
           id: 2,
@@ -62,6 +41,13 @@ export default defineComponent({
           description: `The Journal App is a simple web application that allows you to write and save your thoughts.`,
           image: '',
           path: '/journal',
+        },
+        {
+          id: 4,
+          name: 'Maps App',
+          description: `The Maps App is a location-based application that utilizes Mapbox to provide users with a map interface for navigation. With the ability to calculate distances based on the user's location.`,
+          image: '',
+          path: '/maps-app',
         },
       ],
     };

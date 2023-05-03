@@ -6,7 +6,7 @@ import daybookRouter from './journal';
 import isAuthenticatedGuard from '@/auth/guards';
 
 const routes = [
-  { path: '/', component: ProjectsIndex },
+  { path: '/', name: 'home', component: ProjectsIndex },
   {
     path: '/indecision',
     name: 'Decision Maker App',
@@ -23,12 +23,18 @@ const routes = [
     component: () => import('@projects/journal/index.vue'),
     children: [
         {
-            path: 'auth',
-            ...authRouter,        },
+          path: 'auth',
+          ...authRouter,        
+        },
     ],
   },
 //   { path: '/auth', ...authRouter },
   { path: '/journal/daybook', beforeEnter: [isAuthenticatedGuard], ...daybookRouter },
+  {
+    path: '/maps-app',
+    name: 'Maps App',
+    component: () => import('@projects/mapsApp/index.vue'),
+  },
   { path: '/:pathMatch(.*)*', component: () => import('@pages/404.vue') },
 ];
 
