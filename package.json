@@ -10,6 +10,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@tanstack/vue-query": "^4.29.5",
     "axios": "^1.3.5",
     "mapbox-gl": "^2.14.1",
     "sweetalert2": "^11.7.3",

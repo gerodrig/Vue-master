@@ -1,11 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
 import ProjectsIndex from '@projects/index.vue';
 
 import authRouter from '@/router/auth';
+import characterRoute from '@/router/breakingbad';
 import daybookRouter from './journal';
 import isAuthenticatedGuard from '@/auth/guards';
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: ProjectsIndex },
   {
     path: '/indecision',
@@ -35,11 +36,39 @@ const routes = [
     name: 'Maps App',
     component: () => import('@projects/mapsApp/index.vue'),
   },
+  {
+    path: '/breakingbad',
+    name: 'breakingbad',
+    component: () => import('@projects/breakingbad/index.vue'),
+    children: [
+      {
+        ...characterRoute,
+        path: 'characters',
+      },
+      {
+        path: '/breakingbad/home',
+        name: 'breakingbadHome',
+        component: () => import('@/pages/breakingbad/HomePage.vue'),
+      },
+    {
+      path: '/breakingbad/about',
+      name: 'breakingbadAbout',
+      component: () => import('@/pages/breakingbad/AboutPage.vue'),
+    },
+    ],
+  },
+  {
+    path: '/vue-issues',
+    name: 'vueIssues',
+    // beforeEnter: () => { location.href = 'https://vue-issues.vercel.app/#/'; },
+    component: () => import('@/projects/vue-issues/index.vue'),
+  },
+
   { path: '/:pathMatch(.*)*', component: () => import('@pages/404.vue') },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory( import.meta.env.BASE_URL ),
   routes,
 });
 

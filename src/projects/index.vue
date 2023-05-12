@@ -1,7 +1,7 @@
 <template>
   <div>
     <HomePage :data="projects" />
-    <ul>
+    <ul >
       <li v-for="project in projects" :key="project.id">
         <router-link :to="project.name">{{ project.name }}</router-link>
       </li>
@@ -48,6 +48,20 @@ export default defineComponent({
           description: `The Maps App is a location-based application that utilizes Mapbox to provide users with a map interface for navigation. With the ability to calculate distances based on the user's location.`,
           image: '',
           path: '/maps-app',
+        },
+        {
+          id: 5,
+          name: 'Breakingbad App',
+          description: `The Breaking Bad app is a character encyclopedia where users can search and browse through detailed profiles of their favorite characters from the hit TV series. Perfect for fans looking to dive deeper into the world of Breaking Bad on-the-go!`,
+          image: '',
+          path: '/breakingbad',
+        },
+        {
+          id: 6,
+          name: 'Vue Issue App',
+          description: `This App explores the Vue.js Github API to fetch the latest issues from the Vue.js repository. it uses useQuery, Pinia and Quasar UI and it's built with Vue 3.`,
+          image: '',
+          path: '/vue-issues',
         },
       ],
     };
