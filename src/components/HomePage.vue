@@ -3,7 +3,7 @@
     <Header />
     <main class="container p-4 mx-auto">
       <Logo />
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:h-96 lg:grid-cols-3">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 
       <router-link v-for="project in data" :key="project.id" :to="project.path">
         <Card :data="project" />
@@ -13,13 +13,6 @@
     </main>
     <Footer title="Gerardo Rodriguez" />
   </div>
-
-<!-- //example to keep alive -->
-  <!-- <router-view v-slot="{ Component }">
-   <keep-alive>
-     <component :is="Component" />
-    </keep-alive>
-  </router-view> -->
 </template>
 
 <script lang="ts">

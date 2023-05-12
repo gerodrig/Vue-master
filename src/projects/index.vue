@@ -1,11 +1,7 @@
 <template>
   <div>
     <HomePage :data="projects" />
-    <ul >
-      <li v-for="project in projects" :key="project.id">
-        <router-link :to="project.name">{{ project.name }}</router-link>
-      </li>
-    </ul>
+   
   </div>
 </template>
 

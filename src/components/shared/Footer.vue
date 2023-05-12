@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-800 text-white py-4">
+  <footer class="py-4 text-white bg-gray-800">
     <div class="container mx-auto">
       <p class="text-center">&copy; {{ currentYear }} - {{ title }}</p>
     </div>
